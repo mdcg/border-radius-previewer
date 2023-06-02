@@ -30,3 +30,20 @@
     height: 200px;
     background-color:firebrick;
 }
+
+.border-modifier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.border-modifier h2 {
+    font-family: monospace, monospace;
+    margin: 5px;
+}
+
+.border-modifier input {
+    margin: 5px;
+}
