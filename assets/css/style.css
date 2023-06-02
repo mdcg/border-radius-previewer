@@ -1,0 +1,32 @@
+/*
+    https://origamid.com/projetos/flexbox-guia-completo/
+    https://www.w3schools.com/css/css_align.asp
+    https://css-tricks.com/almanac/properties/b/border-radius/
+*/
+
+.container {
+    margin: 30px auto;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+    font-family: monospace, monospace;
+    text-align: center;
+    margin: 25px 0px 25px 0px;
+}
+
+.border-previewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#border-object {
+    width: 200px;
+    height: 200px;
+    background-color:firebrick;
+}
