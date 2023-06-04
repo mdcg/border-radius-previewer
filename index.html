@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <title>Border Radius Previewer</title>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -17,27 +19,27 @@
             <div id="border-object"></div>
         </div>
         <div class="border-modifier">
-            <div class="border-radius-physical-modifier-header">
+            <div class="border-modifier-header">
                 <h2>
-                    Physical Properties
+                    Properties
                 </h2>
             </div>
-            <div class="border-radius-physical-modifier">
-                <input type="text" name="border-top-left-radius">
-                <input type="text" name="border-top-right-radius">
-                <input type="text" name="border-bottom-left-radius">
-                <input type="text" name="border-bottom-right-radius">
-            </div>
-            <div class="border-radius-logical-modifier-header">
-                <h2>
-                    Logical Properties
-                </h2>
-            </div>
-            <div class="border-radius-logical-modifier">
-                <input type="text" name="border-start-start-radius">
-                <input type="text" name="border-start-end-radius">
-                <input type="text" name="border-end-start-radius">
-                <input type="text" name="border-end-end-radius">
+            <div class="border-modifier-body">
+                <div class="border-modifier-slider">
+                    <input type="range" name="border-top-left-radius" min="0" max="100" value="50" class="slider">
+                </div>
+                <div class="border-modifier-slider">
+                    <input type="range" type="range" name="border-top-left-radius" min="0" max="100" value="50"
+                        class="slider">
+                </div>
+                <div class="border-modifier-slider">
+                    <input type="range" type="range" name="border-top-left-radius" min="0" max="100" value="50"
+                        class="slider">
+                </div>
+                <div class="border-modifier-slider">
+                    <input type="range" type="range" name="border-top-left-radius" min="0" max="100" value="50"
+                        class="slider">
+                </div>
             </div>
         </div>
         <div class="generate-button">
@@ -47,4 +49,5 @@
         </div>
     </div>
 </body>
+
 </html>
