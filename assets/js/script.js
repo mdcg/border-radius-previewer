@@ -1,40 +1,38 @@
-let borderObject = document.getElementById("border-object");
+const borderObject = document.getElementById("border-object");
+const resultElement = document.getElementById("result");
 
-// Horizontal
+const borderTopRightSlider = document.getElementById("border-top-right-radius");
+const borderBottomLeftSlider = document.getElementById("border-bottom-left-radius");
+const borderTopLeftSlider = document.getElementById("border-top-left-radius");
+const borderBottomRightSlider = document.getElementById("border-bottom-right-radius");
+
 let borderTopRightLogicalValue = "0";
 let borderTopRightPhysicalValue = "100";
 let borderBottomLeftLogicalValue = "0";
 let borderBottomLeftPhysicalValue = "100";
-
-// Vertical
 let borderTopLeftLogicalValue = "100";
 let borderTopLeftPhysicalValue = "0";
 let borderBottomRightLogicalValue = "100";
 let borderBottomRightPhysicalValue = "0";
 
-let applyBorderRadius = () => {
-  borderObject.style.borderRadius = `${borderTopRightLogicalValue}% ${borderTopRightPhysicalValue}% ${borderBottomLeftLogicalValue}% ${borderBottomLeftPhysicalValue}% / ${borderTopLeftLogicalValue}% ${borderTopLeftPhysicalValue}% ${borderBottomRightLogicalValue}% ${borderBottomRightPhysicalValue}%`;
+const applyBorderRadius = () => {
+  const borderProperties = `${borderTopRightLogicalValue}% ${borderTopRightPhysicalValue}% ${borderBottomLeftLogicalValue}% ${borderBottomLeftPhysicalValue}% / ${borderTopLeftLogicalValue}% ${borderTopLeftPhysicalValue}% ${borderBottomRightLogicalValue}% ${borderBottomRightPhysicalValue}%`;
+  borderObject.style.borderRadius = borderProperties;
+  updateResult(borderProperties);
 };
 
-applyBorderRadius();
-
-let borderTopRightSlider = document.getElementById("border-top-right-radius");
-let borderBottomLeftSlider = document.getElementById(
-  "border-bottom-left-radius"
-);
-let borderTopLeftSlider = document.getElementById("border-top-left-radius");
-let borderBottomRightSlider = document.getElementById(
-  "border-bottom-right-radius"
-);
-
-let calculateBorderModification = (sliderValue) => {
-  let firstProperty = sliderValue;
-  let secondProperty = 100 - sliderValue;
+const calculateBorderModification = (sliderValue) => {
+  const firstProperty = sliderValue;
+  const secondProperty = 100 - sliderValue;
   return [firstProperty, secondProperty];
 };
 
-let applyBorderModification = (event) => {
-  let [firstProperty, secondProperty] = calculateBorderModification(
+const updateResult = (borderProperties) => {
+  resultElement.innerHTML = borderProperties;
+};
+
+const applyBorderModification = (event) => {
+  const [firstProperty, secondProperty] = calculateBorderModification(
     event.target.value
   );
 
@@ -56,12 +54,13 @@ let applyBorderModification = (event) => {
       borderBottomRightLogicalValue = secondProperty;
       break;
   }
+
   applyBorderRadius();
-  let result = document.getElementById("result");
-  result.innerHTML = `${borderTopRightLogicalValue}% ${borderTopRightPhysicalValue}% ${borderBottomLeftLogicalValue}% ${borderBottomLeftPhysicalValue}% / ${borderTopLeftLogicalValue}% ${borderTopLeftPhysicalValue}% ${borderBottomRightLogicalValue}% ${borderBottomRightPhysicalValue}%`;
 };
 
 borderTopRightSlider.addEventListener("change", applyBorderModification);
 borderBottomLeftSlider.addEventListener("change", applyBorderModification);
 borderTopLeftSlider.addEventListener("change", applyBorderModification);
 borderBottomRightSlider.addEventListener("change", applyBorderModification);
+
+applyBorderRadius();
