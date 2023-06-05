@@ -26,19 +26,20 @@
             </div>
             <div class="border-modifier-body">
                 <div class="border-modifier-slider">
-                    <input type="range" name="border-top-left-radius" min="0" max="100" value="50" class="slider">
+                    <input type="range" type="range" name="border-top-right-radius" id="border-top-right-radius" min="0"
+                        max="100" value="0" class="slider">
                 </div>
                 <div class="border-modifier-slider">
-                    <input type="range" type="range" name="border-top-left-radius" min="0" max="100" value="50"
-                        class="slider">
+                    <input type="range" type="range" name="border-bottom-left-radius" id="border-bottom-left-radius"
+                        min="0" max="100" value="0" class="slider">
                 </div>
                 <div class="border-modifier-slider">
-                    <input type="range" type="range" name="border-top-left-radius" min="0" max="100" value="50"
-                        class="slider">
+                    <input type="range" name="border-top-left-radius" id="border-top-left-radius" min="0" max="100"
+                        value="0" class="slider">
                 </div>
                 <div class="border-modifier-slider">
-                    <input type="range" type="range" name="border-top-left-radius" min="0" max="100" value="50"
-                        class="slider">
+                    <input type="range" type="range" name="border-bottom-right-radius" id="border-bottom-right-radius"
+                        min="0" max="100" value="0" class="slider">
                 </div>
             </div>
         </div>
@@ -47,7 +48,10 @@
                 Generate!
             </button>
         </div>
+        <div id="result">
+        </div>
     </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
