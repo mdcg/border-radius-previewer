@@ -2,9 +2,13 @@ const borderObject = document.getElementById("border-object");
 const resultElement = document.getElementById("result");
 
 const borderTopRightSlider = document.getElementById("border-top-right-radius");
-const borderBottomLeftSlider = document.getElementById("border-bottom-left-radius");
+const borderBottomLeftSlider = document.getElementById(
+  "border-bottom-left-radius"
+);
 const borderTopLeftSlider = document.getElementById("border-top-left-radius");
-const borderBottomRightSlider = document.getElementById("border-bottom-right-radius");
+const borderBottomRightSlider = document.getElementById(
+  "border-bottom-right-radius"
+);
 
 let borderTopRightLogicalValue = "0";
 let borderTopRightPhysicalValue = "100";

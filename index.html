@@ -18,6 +18,18 @@
         <div class="border-previewer">
             <div id="border-object"></div>
         </div>
+        <div class="border-size">
+            <div class="border-size-body">
+                <div class="border-size-input">
+                    <label for="border-size-width">Width</label>
+                    <input type="number" name="border-size-width" id="border-size-width" value="200">
+                </div>
+                <div class="border-size-input">
+                    <label for="border-size-height">Height</label>
+                    <input type="number" name="border-size-height" id="border-size-height" value="200">
+                </div>
+            </div>
+        </div>
         <div class="border-modifier">
             <div class="border-modifier-header">
                 <h2>
@@ -43,15 +55,16 @@
                 </div>
             </div>
         </div>
-        <div class="generate-button">
+        <div class="copy-button">
             <button>
-                Generate!
+                Copy
             </button>
         </div>
         <div id="result">
         </div>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/border.js"></script>
+    <script src="assets/js/box.js"></script>
 </body>
 
 </html>
